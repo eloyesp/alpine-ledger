@@ -2,6 +2,7 @@ FROM alpine:latest
 
 ARG LEDGER_VERSION=next
 
+RUN apk add --no-cache coreutils
 RUN apk add --no-cache --virtual .build-deps \
 		boost boost-iostreams boost-unit_test_framework gmp mpfr3 \
 		boost-dev gmp-dev mpfr-dev cmake make g++ wget \
